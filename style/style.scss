@@ -2,6 +2,7 @@
 $primary: #FFF5F8;
 $secondary: #6A66A3;
 $hover: #C2E7D9;
+$text: #323232;
 * {
     box-sizing: border-box;
     margin: 0;
@@ -10,15 +11,18 @@ $hover: #C2E7D9;
 
 body {
     font-family: Helvetica, Arial, sans-serif;
-    color: #323232;
+    color: $text;
     height: 2000px;
     // background-color: #fff5f8;
 }
 
-a{text-decoration: none;}
+a{
+    text-decoration: none;
+    color: $text;
+}
 
 .link{
-    color: $secondary;
+    color: $text;
     text-decoration: none;
     text-decoration: underline;
     text-decoration-color: $hover;
@@ -35,7 +39,7 @@ a{text-decoration: none;}
 
 }
 .button{
-    color: $secondary;
+    color: $text;
     text-decoration: underline;
     text-decoration-color: $hover;
     text-decoration-thickness: .3em;
@@ -64,7 +68,7 @@ a{text-decoration: none;}
 }
 header {
     background-color: white;
-    padding-block: 1em;
+    padding-block: 0.2em;
     padding-inline: 15%;
     box-shadow: 0px -46px 51px 20px rgba(0,0,0,0.45);
     // width: 100%;
@@ -77,7 +81,7 @@ header {
         align-items: center;
         justify-content: center;
         flex-direction: column;    
-        margin-block: 2em;
+        margin-block: 1em;
 @media (min-width: 1000px) {
             justify-content: space-between;
             flex-direction: row;    
@@ -90,12 +94,14 @@ header {
 
         ul {
             display: flex;
-            justify-content: end;
+            justify-content: center;
             list-style-type: none;
             flex-wrap: nowrap;
             margin-top: 2em;
             @media (min-width: 1000px) {
-                margin-top: 0em;
+                margin-block: 2em;
+                justify-content: end;
+
             }
 
             li {
@@ -119,6 +125,7 @@ main{
 
 .section1{
     margin-top: 1.5em;
+    max-height: 80vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -141,13 +148,15 @@ main{
     }
     img{
         order: 2;    
+        min-width: 100%;
         overflow: hidden; 
         border-radius: 0em 0em 1em 1em;
+        min-height: 100%;
 
     }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
 
 .section1 {
     display: flex;
@@ -162,6 +171,8 @@ main{
         height: 40vh;
         order: 1;
         border-radius: 1em 0em 0em 1em;
+        min-width: 0%;
+        min-height: 4em;
     }
     h2 {
         order: 2;
@@ -172,6 +183,45 @@ main{
 }
 }
 
+// .container-nav{
+//     display: flex;
+//     flex-direction: column;
+//     // align-items: center;
+//     // justify-content: end;
+// }
 
+//  BG COLOR SELECTOR
 
+.bGButton{
+    display: flex;
+    justify-content: end;
+    align-items: center;
 
+  }
+  
+  button {
+    border-radius: 2em;
+    padding: 1em;
+    margin: 1em;
+  }
+  
+  .primary{
+    background-color: #FFF5F8;
+  }
+  
+  .secondary{
+    background-color: #F0D9FF;
+  }
+  
+  .accent1{
+    background-color: #E1E4FF;
+  }
+  
+  .accent2{
+    background-color: #D4EEFF;
+  }
+  
+  .accent3{
+    background-color: #ECF8CC;
+  }
+  

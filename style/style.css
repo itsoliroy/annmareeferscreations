@@ -12,10 +12,11 @@ body {
 
 a {
   text-decoration: none;
+  color: #323232;
 }
 
 .link {
-  color: #6A66A3;
+  color: #323232;
   text-decoration: none;
   text-decoration: underline;
   text-decoration-color: #C2E7D9;
@@ -34,7 +35,7 @@ a {
 }
 
 .button {
-  color: #6A66A3;
+  color: #323232;
   text-decoration: underline;
   text-decoration-color: #C2E7D9;
   text-decoration-thickness: 0.3em;
@@ -65,7 +66,7 @@ a {
 
 header {
   background-color: white;
-  padding-block: 1em;
+  padding-block: 0.2em;
   padding-inline: 15%;
   box-shadow: 0px -46px 51px 20px rgba(0, 0, 0, 0.45);
 }
@@ -80,7 +81,7 @@ header nav {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-block: 2em;
+  margin-block: 1em;
 }
 @media (min-width: 1000px) {
   header nav {
@@ -94,14 +95,15 @@ header nav img {
 }
 header nav ul {
   display: flex;
-  justify-content: end;
+  justify-content: center;
   list-style-type: none;
   flex-wrap: nowrap;
   margin-top: 2em;
 }
 @media (min-width: 1000px) {
   header nav ul {
-    margin-top: 0em;
+    margin-block: 2em;
+    justify-content: end;
   }
 }
 header nav ul li {
@@ -120,6 +122,7 @@ main {
 
 .section1 {
   margin-top: 1.5em;
+  max-height: 80vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -141,11 +144,13 @@ main {
 }
 .section1 img {
   order: 2;
+  min-width: 100%;
   overflow: hidden;
   border-radius: 0em 0em 1em 1em;
+  min-height: 100%;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
   .section1 {
     display: flex;
     align-items: center;
@@ -159,6 +164,8 @@ main {
     height: 40vh;
     order: 1;
     border-radius: 1em 0em 0em 1em;
+    min-width: 0%;
+    min-height: 4em;
   }
   .section1 h2 {
     order: 2;
@@ -166,4 +173,35 @@ main {
     align-self: last baseline;
     margin-right: 1em;
   }
+}
+.bGButton {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+button {
+  border-radius: 2em;
+  padding: 1em;
+  margin: 1em;
+}
+
+.primary {
+  background-color: #FFF5F8;
+}
+
+.secondary {
+  background-color: #F0D9FF;
+}
+
+.accent1 {
+  background-color: #E1E4FF;
+}
+
+.accent2 {
+  background-color: #D4EEFF;
+}
+
+.accent3 {
+  background-color: #ECF8CC;
 }/*# sourceMappingURL=style.css.map */
