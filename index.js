@@ -7,3 +7,5 @@ $(document).ready(function() {
       console.log($('body').attr('class'));
     });
   });
+
+  console.log("hello world");
